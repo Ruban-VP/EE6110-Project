@@ -8,9 +8,10 @@ close all;
 %% System identification for 20% uniform and 80% laplace
 
 N = 1e3;
-N_trials = 1e3;
-L = 5;
-f = randn(1,L);
+N_trials = 1e2;
+L = 40;
+f = randn(L,1);
+f = f/sqrt(f'*f);
 L = length(f);
 
 sigy = 1;
@@ -82,9 +83,10 @@ legend('LMLS','LLAD','NFRMS');
 %% System identification for 50% uniform and 50% laplace
 
 N = 1e3;
-N_trials = 1e3;
-L = 5;
-f = randn(1,L);
+N_trials = 1e2;
+L = 40;
+f = randn(L,1);
+f = f/sqrt(f'*f);
 L = length(f);
 
 sigy = 1;
@@ -156,9 +158,10 @@ legend('LMLS','LLAD','NFRMS');
 %% System identification for 80% uniform and 20% laplace
 
 N = 1e3;
-N_trials = 1e3;
-L = 5;
-f = randn(1,L);
+N_trials = 1e2;
+L = 40;
+f = randn(L,1);
+f = f/sqrt(f'*f);
 L = length(f);
 
 sigy = 1;
