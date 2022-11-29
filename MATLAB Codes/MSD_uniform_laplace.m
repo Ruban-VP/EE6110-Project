@@ -7,7 +7,7 @@ close all;
 
 %% System identification for 20% uniform and 80% laplace
 
-N = 1e3;
+N = 1e4;
 N_trials = 1e2;
 L = 40;
 f = randn(L,1);
@@ -79,10 +79,13 @@ hold on;
 plot(1:N,10*log10(MSD_2));
 plot(1:N,10*log10(MSD_3));
 legend('LMLS','LLAD','NFRMS');
+xlabel('Time index');
+ylabel('MSD (in dB)');
+title('MSD plot for 20% uniform and 80% laplace noise');
 
 %% System identification for 50% uniform and 50% laplace
 
-N = 1e3;
+N = 1e4;
 N_trials = 1e2;
 L = 40;
 f = randn(L,1);
@@ -154,10 +157,13 @@ hold on;
 plot(1:N,10*log10(MSD_2));
 plot(1:N,10*log10(MSD_3));
 legend('LMLS','LLAD','NFRMS');
+xlabel('Time index');
+ylabel('MSD (in dB)');
+title('MSD plot for 50% uniform and 50% laplace noise');
 
 %% System identification for 80% uniform and 20% laplace
 
-N = 1e3;
+N = 1e4;
 N_trials = 1e2;
 L = 40;
 f = randn(L,1);
@@ -229,3 +235,6 @@ hold on;
 plot(1:N,10*log10(MSD_2));
 plot(1:N,10*log10(MSD_3));
 legend('LMLS','LLAD','NFRMS');
+xlabel('Time index');
+ylabel('MSD (in dB)');
+title('MSD plot for 80% uniform and 20% laplace noise');
